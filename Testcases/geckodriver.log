@@ -4774,3 +4774,20 @@ console.error: BroadcastService:
 1552713547024	Marionette	INFO	Stopped listening on port 45507
 [Parent 5411, Gecko_IOThread] WARNING: pipe error (64): Connection reset by peer: file /build/firefox-5TPFUC/firefox-65.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 349
 [Parent 5411, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-5TPFUC/firefox-65.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 349
+1552737708185	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.L7bm0eGmcDBH"
+*** You are running in headless mode.
+1552737711192	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1552737711192	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1552737714319	Marionette	INFO	Listening on port 42705
+1552737714417	Marionette	WARN	TLS certificate errors will be ignored for this session
+1552737722937	Marionette	INFO	Stopped listening on port 42705
+[Parent 23071, Gecko_IOThread] WARNING: pipe error (64): Connection reset by peer: file /build/firefox-5TPFUC/firefox-65.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 349
+1552737732518	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.gMdziSg4bX5C"
+*** You are running in headless mode.
+1552737732786	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1552737732786	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1552737734134	Marionette	INFO	Listening on port 40711
+1552737734238	Marionette	WARN	TLS certificate errors will be ignored for this session
+1552737742668	Marionette	INFO	Stopped listening on port 40711
+[Parent 23448, Gecko_IOThread] WARNING: pipe error (64): Connection reset by peer: file /build/firefox-5TPFUC/firefox-65.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 349
+[Parent 23448, Gecko_IOThread] WARNING: pipe error (72): Connection reset by peer: file /build/firefox-5TPFUC/firefox-65.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 349
