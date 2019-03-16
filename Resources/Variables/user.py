@@ -1,5 +1,5 @@
 URL = "http://18.234.7.15/"
-BROWSER = "ff"
+BROWSER = "headless firefox"
 pokemail_url = "https://guerrillamail.com"
 
 

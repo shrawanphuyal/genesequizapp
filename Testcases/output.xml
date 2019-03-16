@@ -1,424 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20190214 14:25:46.284" rpa="false" generator="Robot 3.1.1 (Python 3.5.2 on linux)">
-<suite source="/home/shrawan/PycharmProjects/AWSQuizz/Testcases/login.robot" name="Login" id="s1">
-<test name="Login" id="s1-t1">
-<kw library="BuiltIn" name="Repeat Keyword">
-<doc>Executes the specified keyword multiple times.</doc>
-<arguments>
-<arg>5 times</arg>
-<arg>login</arg>
-<arg>${signup_email_value}</arg>
-<arg>${signup_password_value}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:25:46.404">Repeating keyword, round 1/5.</msg>
-<kw library="login_keyword" name="login">
+<robot rpa="false" generated="20190316 11:03:56.196" generator="Robot 3.1 (Python 2.7.12 on linux2)">
+<suite source="/home/shrawan/PycharmProjects/AWSQuizz/Testcases/login.robot" id="s1" name="Login">
+<test id="s1-t1" name="Login">
+<kw name="login" library="login_keyword">
 <arguments>
 <arg>${signup_email_value}</arg>
 <arg>${signup_password_value}</arg>
 </arguments>
-<kw library="Selenium2Library" name="Open Browser">
+<kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg level="INFO" timestamp="20190214 14:25:46.404">Opening browser 'ff' to base url 'http://18.234.7.15/'.</msg>
-<status status="PASS" endtime="20190214 14:25:51.762" starttime="20190214 14:25:46.404"></status>
+<msg timestamp="20190316 11:03:56.284" level="INFO">Opening browser 'headless firefox' to base url 'http://18.234.7.15/'.</msg>
+<status status="PASS" endtime="20190316 11:04:01.589" starttime="20190316 11:03:56.283"></status>
 </kw>
-<kw library="Selenium2Library" name="Maximize Browser Window">
+<kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20190214 14:25:52.066" starttime="20190214 14:25:51.763"></status>
+<status status="PASS" endtime="20190316 11:04:01.593" starttime="20190316 11:04:01.589"></status>
 </kw>
-<kw library="Selenium2Library" name="Title Should Be">
+<kw name="Title Should Be" library="Selenium2Library">
 <doc>Verifies that current page title equals ``title``.</doc>
 <arguments>
 <arg>AWSQuizFE</arg>
 </arguments>
-<msg level="INFO" timestamp="20190214 14:25:52.077">Page title is 'AWSQuizFE'.</msg>
-<status status="PASS" endtime="20190214 14:25:52.078" starttime="20190214 14:25:52.067"></status>
+<msg timestamp="20190316 11:04:01.596" level="INFO">Page title is 'AWSQuizFE'.</msg>
+<status status="PASS" endtime="20190316 11:04:01.597" starttime="20190316 11:04:01.593"></status>
 </kw>
-<kw library="Selenium2Library" name="Get Title">
+<kw name="Get Title" library="Selenium2Library">
 <doc>Returns the title of current page.</doc>
 <assign>
 <var>${text1}</var>
 </assign>
-<msg level="INFO" timestamp="20190214 14:25:52.087">${text1} = AWSQuizFE</msg>
-<status status="PASS" endtime="20190214 14:25:52.088" starttime="20190214 14:25:52.079"></status>
+<msg timestamp="20190316 11:04:01.599" level="INFO">${text1} = AWSQuizFE</msg>
+<status status="PASS" endtime="20190316 11:04:01.599" starttime="20190316 11:04:01.597"></status>
 </kw>
-<kw library="BuiltIn" name="Log To Console">
+<kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>The title of the page is: ${text1}</arg>
 </arguments>
-<status status="PASS" endtime="20190214 14:25:52.091" starttime="20190214 14:25:52.088"></status>
+<status status="PASS" endtime="20190316 11:04:01.600" starttime="20190316 11:04:01.599"></status>
 </kw>
-<kw library="Selenium2Library" name="Input Text">
+<kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
 <arg>${Email_element}</arg>
 <arg>${signup_email_value}</arg>
 </arguments>
-<msg level="INFO" timestamp="20190214 14:25:52.093">Typing text 'phuyal@pokemail.net' into text field '//input[@id='inputEmail']'.</msg>
-<status status="PASS" endtime="20190214 14:25:52.169" starttime="20190214 14:25:52.092"></status>
+<msg timestamp="20190316 11:04:01.600" level="INFO">Typing text 'phuyal@pokemail.net' into text field '//input[@id='inputEmail']'.</msg>
+<status status="PASS" endtime="20190316 11:04:01.669" starttime="20190316 11:04:01.600"></status>
 </kw>
-<kw library="Selenium2Library" name="Input Text">
+<kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
 <arg>${Password_element}</arg>
 <arg>${signup_password_value}</arg>
 </arguments>
-<msg level="INFO" timestamp="20190214 14:25:52.170">Typing text 'Password+123' into text field '//input[@id='inputPassword']'.</msg>
-<status status="PASS" endtime="20190214 14:25:52.219" starttime="20190214 14:25:52.169"></status>
+<msg timestamp="20190316 11:04:01.669" level="INFO">Typing text 'Password+123' into text field '//input[@id='inputPassword']'.</msg>
+<status status="PASS" endtime="20190316 11:04:01.730" starttime="20190316 11:04:01.669"></status>
 </kw>
-<kw library="Selenium2Library" name="Click Element">
+<kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${sign_in}</arg>
 </arguments>
-<msg level="INFO" timestamp="20190214 14:25:52.219">Clicking element '//button[contains(text(),'Sign in')]'.</msg>
-<status status="PASS" endtime="20190214 14:25:52.454" starttime="20190214 14:25:52.219"></status>
+<msg timestamp="20190316 11:04:01.730" level="INFO">Clicking element '//button[contains(text(),'Sign in')]'.</msg>
+<status status="PASS" endtime="20190316 11:04:01.968" starttime="20190316 11:04:01.730"></status>
 </kw>
-<kw library="BuiltIn" name="Sleep">
+<kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg level="INFO" timestamp="20190214 14:25:57.456">Slept 5 seconds</msg>
-<status status="PASS" endtime="20190214 14:25:57.457" starttime="20190214 14:25:52.455"></status>
+<msg timestamp="20190316 11:04:06.969" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20190316 11:04:06.969" starttime="20190316 11:04:01.968"></status>
 </kw>
-<status status="PASS" endtime="20190214 14:25:57.458" starttime="20190214 14:25:46.404"></status>
+<status status="PASS" endtime="20190316 11:04:06.970" starttime="20190316 11:03:56.283"></status>
 </kw>
-<msg level="INFO" timestamp="20190214 14:25:57.458">Repeating keyword, round 2/5.</msg>
-<kw library="login_keyword" name="login">
-<arguments>
-<arg>${signup_email_value}</arg>
-<arg>${signup_password_value}</arg>
-</arguments>
-<kw library="Selenium2Library" name="Open Browser">
-<doc>Opens a new browser instance to the given ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:25:57.463">Opening browser 'ff' to base url 'http://18.234.7.15/'.</msg>
-<status status="PASS" endtime="20190214 14:26:04.408" starttime="20190214 14:25:57.461"></status>
-</kw>
-<kw library="Selenium2Library" name="Maximize Browser Window">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20190214 14:26:04.711" starttime="20190214 14:26:04.409"></status>
-</kw>
-<kw library="Selenium2Library" name="Title Should Be">
-<doc>Verifies that current page title equals ``title``.</doc>
-<arguments>
-<arg>AWSQuizFE</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:04.722">Page title is 'AWSQuizFE'.</msg>
-<status status="PASS" endtime="20190214 14:26:04.723" starttime="20190214 14:26:04.712"></status>
-</kw>
-<kw library="Selenium2Library" name="Get Title">
-<doc>Returns the title of current page.</doc>
-<assign>
-<var>${text1}</var>
-</assign>
-<msg level="INFO" timestamp="20190214 14:26:04.732">${text1} = AWSQuizFE</msg>
-<status status="PASS" endtime="20190214 14:26:04.732" starttime="20190214 14:26:04.723"></status>
-</kw>
-<kw library="BuiltIn" name="Log To Console">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>The title of the page is: ${text1}</arg>
-</arguments>
-<status status="PASS" endtime="20190214 14:26:04.735" starttime="20190214 14:26:04.733"></status>
-</kw>
-<kw library="Selenium2Library" name="Input Text">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${Email_element}</arg>
-<arg>${signup_email_value}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:04.736">Typing text 'phuyal@pokemail.net' into text field '//input[@id='inputEmail']'.</msg>
-<status status="PASS" endtime="20190214 14:26:04.818" starttime="20190214 14:26:04.735"></status>
-</kw>
-<kw library="Selenium2Library" name="Input Text">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${Password_element}</arg>
-<arg>${signup_password_value}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:04.819">Typing text 'Password+123' into text field '//input[@id='inputPassword']'.</msg>
-<status status="PASS" endtime="20190214 14:26:04.868" starttime="20190214 14:26:04.818"></status>
-</kw>
-<kw library="Selenium2Library" name="Click Element">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${sign_in}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:04.869">Clicking element '//button[contains(text(),'Sign in')]'.</msg>
-<status status="PASS" endtime="20190214 14:26:05.105" starttime="20190214 14:26:04.868"></status>
-</kw>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>5s</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:10.108">Slept 5 seconds</msg>
-<status status="PASS" endtime="20190214 14:26:10.108" starttime="20190214 14:26:05.106"></status>
-</kw>
-<status status="PASS" endtime="20190214 14:26:10.109" starttime="20190214 14:25:57.459"></status>
-</kw>
-<msg level="INFO" timestamp="20190214 14:26:10.109">Repeating keyword, round 3/5.</msg>
-<kw library="login_keyword" name="login">
-<arguments>
-<arg>${signup_email_value}</arg>
-<arg>${signup_password_value}</arg>
-</arguments>
-<kw library="Selenium2Library" name="Open Browser">
-<doc>Opens a new browser instance to the given ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:10.114">Opening browser 'ff' to base url 'http://18.234.7.15/'.</msg>
-<status status="PASS" endtime="20190214 14:26:17.148" starttime="20190214 14:26:10.113"></status>
-</kw>
-<kw library="Selenium2Library" name="Maximize Browser Window">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20190214 14:26:17.442" starttime="20190214 14:26:17.150"></status>
-</kw>
-<kw library="Selenium2Library" name="Title Should Be">
-<doc>Verifies that current page title equals ``title``.</doc>
-<arguments>
-<arg>AWSQuizFE</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:17.458">Page title is 'AWSQuizFE'.</msg>
-<status status="PASS" endtime="20190214 14:26:17.459" starttime="20190214 14:26:17.443"></status>
-</kw>
-<kw library="Selenium2Library" name="Get Title">
-<doc>Returns the title of current page.</doc>
-<assign>
-<var>${text1}</var>
-</assign>
-<msg level="INFO" timestamp="20190214 14:26:17.468">${text1} = AWSQuizFE</msg>
-<status status="PASS" endtime="20190214 14:26:17.468" starttime="20190214 14:26:17.459"></status>
-</kw>
-<kw library="BuiltIn" name="Log To Console">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>The title of the page is: ${text1}</arg>
-</arguments>
-<status status="PASS" endtime="20190214 14:26:17.471" starttime="20190214 14:26:17.469"></status>
-</kw>
-<kw library="Selenium2Library" name="Input Text">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${Email_element}</arg>
-<arg>${signup_email_value}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:17.472">Typing text 'phuyal@pokemail.net' into text field '//input[@id='inputEmail']'.</msg>
-<status status="PASS" endtime="20190214 14:26:17.562" starttime="20190214 14:26:17.471"></status>
-</kw>
-<kw library="Selenium2Library" name="Input Text">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${Password_element}</arg>
-<arg>${signup_password_value}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:17.562">Typing text 'Password+123' into text field '//input[@id='inputPassword']'.</msg>
-<status status="PASS" endtime="20190214 14:26:17.608" starttime="20190214 14:26:17.562"></status>
-</kw>
-<kw library="Selenium2Library" name="Click Element">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${sign_in}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:17.609">Clicking element '//button[contains(text(),'Sign in')]'.</msg>
-<status status="PASS" endtime="20190214 14:26:17.842" starttime="20190214 14:26:17.609"></status>
-</kw>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>5s</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:22.845">Slept 5 seconds</msg>
-<status status="PASS" endtime="20190214 14:26:22.846" starttime="20190214 14:26:17.843"></status>
-</kw>
-<status status="PASS" endtime="20190214 14:26:22.847" starttime="20190214 14:26:10.110"></status>
-</kw>
-<msg level="INFO" timestamp="20190214 14:26:22.847">Repeating keyword, round 4/5.</msg>
-<kw library="login_keyword" name="login">
-<arguments>
-<arg>${signup_email_value}</arg>
-<arg>${signup_password_value}</arg>
-</arguments>
-<kw library="Selenium2Library" name="Open Browser">
-<doc>Opens a new browser instance to the given ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:22.852">Opening browser 'ff' to base url 'http://18.234.7.15/'.</msg>
-<status status="PASS" endtime="20190214 14:26:30.095" starttime="20190214 14:26:22.850"></status>
-</kw>
-<kw library="Selenium2Library" name="Maximize Browser Window">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20190214 14:26:30.371" starttime="20190214 14:26:30.095"></status>
-</kw>
-<kw library="Selenium2Library" name="Title Should Be">
-<doc>Verifies that current page title equals ``title``.</doc>
-<arguments>
-<arg>AWSQuizFE</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:30.382">Page title is 'AWSQuizFE'.</msg>
-<status status="PASS" endtime="20190214 14:26:30.383" starttime="20190214 14:26:30.372"></status>
-</kw>
-<kw library="Selenium2Library" name="Get Title">
-<doc>Returns the title of current page.</doc>
-<assign>
-<var>${text1}</var>
-</assign>
-<msg level="INFO" timestamp="20190214 14:26:30.392">${text1} = AWSQuizFE</msg>
-<status status="PASS" endtime="20190214 14:26:30.392" starttime="20190214 14:26:30.383"></status>
-</kw>
-<kw library="BuiltIn" name="Log To Console">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>The title of the page is: ${text1}</arg>
-</arguments>
-<status status="PASS" endtime="20190214 14:26:30.394" starttime="20190214 14:26:30.393"></status>
-</kw>
-<kw library="Selenium2Library" name="Input Text">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${Email_element}</arg>
-<arg>${signup_email_value}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:30.396">Typing text 'phuyal@pokemail.net' into text field '//input[@id='inputEmail']'.</msg>
-<status status="PASS" endtime="20190214 14:26:30.462" starttime="20190214 14:26:30.395"></status>
-</kw>
-<kw library="Selenium2Library" name="Input Text">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${Password_element}</arg>
-<arg>${signup_password_value}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:30.462">Typing text 'Password+123' into text field '//input[@id='inputPassword']'.</msg>
-<status status="PASS" endtime="20190214 14:26:30.516" starttime="20190214 14:26:30.462"></status>
-</kw>
-<kw library="Selenium2Library" name="Click Element">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${sign_in}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:30.517">Clicking element '//button[contains(text(),'Sign in')]'.</msg>
-<status status="PASS" endtime="20190214 14:26:30.751" starttime="20190214 14:26:30.516"></status>
-</kw>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>5s</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:35.753">Slept 5 seconds</msg>
-<status status="PASS" endtime="20190214 14:26:35.754" starttime="20190214 14:26:30.751"></status>
-</kw>
-<status status="PASS" endtime="20190214 14:26:35.755" starttime="20190214 14:26:22.848"></status>
-</kw>
-<msg level="INFO" timestamp="20190214 14:26:35.755">Repeating keyword, round 5/5.</msg>
-<kw library="login_keyword" name="login">
-<arguments>
-<arg>${signup_email_value}</arg>
-<arg>${signup_password_value}</arg>
-</arguments>
-<kw library="Selenium2Library" name="Open Browser">
-<doc>Opens a new browser instance to the given ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:35.759">Opening browser 'ff' to base url 'http://18.234.7.15/'.</msg>
-<status status="PASS" endtime="20190214 14:26:41.580" starttime="20190214 14:26:35.758"></status>
-</kw>
-<kw library="Selenium2Library" name="Maximize Browser Window">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20190214 14:26:41.867" starttime="20190214 14:26:41.581"></status>
-</kw>
-<kw library="Selenium2Library" name="Title Should Be">
-<doc>Verifies that current page title equals ``title``.</doc>
-<arguments>
-<arg>AWSQuizFE</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:41.870">Page title is 'AWSQuizFE'.</msg>
-<status status="PASS" endtime="20190214 14:26:41.870" starttime="20190214 14:26:41.867"></status>
-</kw>
-<kw library="Selenium2Library" name="Get Title">
-<doc>Returns the title of current page.</doc>
-<assign>
-<var>${text1}</var>
-</assign>
-<msg level="INFO" timestamp="20190214 14:26:41.872">${text1} = AWSQuizFE</msg>
-<status status="PASS" endtime="20190214 14:26:41.872" starttime="20190214 14:26:41.870"></status>
-</kw>
-<kw library="BuiltIn" name="Log To Console">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>The title of the page is: ${text1}</arg>
-</arguments>
-<status status="PASS" endtime="20190214 14:26:41.873" starttime="20190214 14:26:41.873"></status>
-</kw>
-<kw library="Selenium2Library" name="Input Text">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${Email_element}</arg>
-<arg>${signup_email_value}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:41.873">Typing text 'phuyal@pokemail.net' into text field '//input[@id='inputEmail']'.</msg>
-<status status="PASS" endtime="20190214 14:26:41.998" starttime="20190214 14:26:41.873"></status>
-</kw>
-<kw library="Selenium2Library" name="Input Text">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${Password_element}</arg>
-<arg>${signup_password_value}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:41.998">Typing text 'Password+123' into text field '//input[@id='inputPassword']'.</msg>
-<status status="PASS" endtime="20190214 14:26:42.053" starttime="20190214 14:26:41.998"></status>
-</kw>
-<kw library="Selenium2Library" name="Click Element">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${sign_in}</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:42.053">Clicking element '//button[contains(text(),'Sign in')]'.</msg>
-<status status="PASS" endtime="20190214 14:26:42.290" starttime="20190214 14:26:42.053"></status>
-</kw>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>5s</arg>
-</arguments>
-<msg level="INFO" timestamp="20190214 14:26:47.292">Slept 5 seconds</msg>
-<status status="PASS" endtime="20190214 14:26:47.293" starttime="20190214 14:26:42.290"></status>
-</kw>
-<status status="PASS" endtime="20190214 14:26:47.293" starttime="20190214 14:26:35.756"></status>
-</kw>
-<status status="PASS" endtime="20190214 14:26:47.294" starttime="20190214 14:25:46.403"></status>
-</kw>
-<status critical="yes" status="PASS" endtime="20190214 14:26:47.295" starttime="20190214 14:25:46.403"></status>
+<status status="PASS" endtime="20190316 11:04:06.971" critical="yes" starttime="20190316 11:03:56.282"></status>
 </test>
-<kw library="Selenium2Library" type="teardown" name="Close All Browsers">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20190214 14:26:50.843" starttime="20190214 14:26:47.306"></status>
+<test id="s1-t2" name="Dashboard validate">
+<kw name="login dashboard" library="login_keyword">
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[contains(text(),'Dashboard')]</arg>
+</arguments>
+<assign>
+<var>${textw}</var>
+</assign>
+<msg timestamp="20190316 11:04:07.022" level="INFO">${textw} = Dashboard</msg>
+<status status="PASS" endtime="20190316 11:04:07.022" starttime="20190316 11:04:06.978"></status>
 </kw>
-<status status="PASS" endtime="20190214 14:26:50.843" starttime="20190214 14:25:46.285"></status>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>The page contains: ${textw}</arg>
+</arguments>
+<status status="PASS" endtime="20190316 11:04:07.022" starttime="20190316 11:04:07.022"></status>
+</kw>
+<status status="PASS" endtime="20190316 11:04:07.022" starttime="20190316 11:04:06.976"></status>
+</kw>
+<status status="PASS" endtime="20190316 11:04:07.022" critical="yes" starttime="20190316 11:04:06.974"></status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190316 11:04:07.609" starttime="20190316 11:04:07.023"></status>
+</kw>
+<status status="PASS" endtime="20190316 11:04:07.609" starttime="20190316 11:03:56.197"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" name="Login" id="s1" pass="1">Login</stat>
+<stat fail="0" id="s1" name="Login" pass="2">Login</stat>
 </suite>
 </statistics>
 <errors>

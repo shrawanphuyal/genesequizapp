@@ -14,6 +14,9 @@ login
     Input Text  ${Password_element}  ${signup_password_value}
     Click Element  ${sign_in}
     sleep  5s
+login dashboard
+    ${textw}=   Get Text  //span[contains(text(),'Dashboard')]
+    log to console  The page contains: ${textw}
     #${text}=  Get Text  ${text_location1}
     #log to console  ${text}
     #Click Element  ${start_quiz}

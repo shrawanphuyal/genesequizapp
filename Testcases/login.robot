@@ -10,6 +10,9 @@ Suite Teardown  Close All Browsers
   # Browser Opening
 
 Login
+    login  ${signup_email_value}  ${signup_password_value}
+Dashboard validate
+    login dashboard
     #${Browser} =    Browser Opening.login
-    Repeat Keyword	5 times  login  ${signup_email_value}  ${signup_password_value}
+    #Repeat Keyword	5 times  login  ${signup_email_value}  ${signup_password_value}
     #Repeat Keyword	5 times
