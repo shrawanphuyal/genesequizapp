@@ -5,7 +5,7 @@ Library  BuiltIn
 *** Keywords ***
 login
     [Arguments]  ${signup_email_value}  ${signup_password_value}
-    Open Browser  ${URL}  ${BROWSER}
+    Open Browser  ${URL}  ${BROWSER}  executable_path="/home/shrawan/PycharmProjects/AWSQuizz/venv/bin/geckodriver"
     Maximize Browser Window
     Title Should Be  AWSQuizFE
     ${text1}=   Get Title
